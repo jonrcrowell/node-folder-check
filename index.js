@@ -1,10 +1,10 @@
 const { opendir } = require('fs/promises')
 
-const lookForMe = 'E://tempx'
+const lookForMe = 'E://temp'
 
-async function CheckForFolder(folderToCheck) {
+async function folderExists(folderToCheck) {
   try {
-    const dir = await opendir(folderToCheck)
+    await opendir(folderToCheck)
     console.log('Yay! The folder exists. Continue as planned.')
   } catch (err) {
     console.error(
@@ -13,4 +13,4 @@ async function CheckForFolder(folderToCheck) {
   }
 }
 
-CheckForFolder(lookForMe)
+folderExists(lookForMe)
