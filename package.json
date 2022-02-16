@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node app.js",
+    "dev": "node index.js",
     "commit": "git-cz"
   },
   "keywords": [],
